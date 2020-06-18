@@ -19,10 +19,10 @@
             <Button
                 android:id="@+id/button_delete_task"
                 android:layout_width="84dp"
-                android:layout_height="36dp"
+                android:layout_height="38dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
-                android:backgroundTint="@android:color/holo_red_dark"
+                android:backgroundTint="#A4191D"
                 android:text="DELETE"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/task_title_txt"
@@ -40,24 +40,28 @@
 
             <TextView
                 android:id="@+id/task_id_txt"
-                android:layout_width="8dp"
-                android:layout_height="19dp"
-                android:layout_marginTop="16dp"
+                android:layout_width="40dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:text="1"
+                android:textColor="#462934 "
+                android:textSize="40sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline1"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.327" />
+                app:layout_constraintVertical_bias="0.424" />
 
             <TextView
                 android:id="@+id/task_title_txt"
-                android:layout_width="183dp"
-                android:layout_height="36dp"
+                android:layout_width="175dp"
+                android:layout_height="29dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="16dp"
-                android:text="task title"
+                android:text="task title:"
+                android:textColor="@android:color/black"
+                android:textSize="25"
                 app:layout_constraintStart_toEndOf="@+id/task_id_txt"
                 app:layout_constraintTop_toTopOf="parent" />
 
