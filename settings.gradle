@@ -1,0 +1,2 @@
+rootProject.name='GoTeamApp2'
+include ':app'
