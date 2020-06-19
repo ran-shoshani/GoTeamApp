@@ -1,9 +1,11 @@
 package com.ran6369.goteamapp2;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,6 +17,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     private Context context;
     private ArrayList task_id, task_title;
+
+
 
     CustomAdapter(Context context, ArrayList task_id, ArrayList task_title){
         this.context = context;
@@ -31,9 +35,18 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
         holder.task_id_txt.setText(String.valueOf(task_id.get(position)));
         holder.task_title_txt.setText(String.valueOf(task_title.get(position)));
+        holder.mainLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Intent intent = new Intent(context, UpdateActivity.class);
+                //intent.putExtra("id", String.valueOf(task_id.get(position)));
+                //intent.putExtra("title", String.valueOf(task_title.get(position)));
+                //context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -41,14 +54,16 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         return task_id.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+     class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView task_id_txt, task_title_txt;
+        LinearLayout mainLayout;
 
-        public MyViewHolder(@NonNull View itemView) {
+         MyViewHolder(@NonNull View itemView) {
             super(itemView);
             task_id_txt = itemView.findViewById(R.id.task_id_txt);
             task_title_txt = itemView.findViewById(R.id.task_title_txt);
+            mainLayout = itemView.findViewById(R.id.mainLayout);
         }
     }
 

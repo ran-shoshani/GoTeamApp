@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#63666D"
     tools:context=".AddActivity">
 
     <Button
@@ -26,13 +27,13 @@
         android:id="@+id/taskTitleInput"
         android:layout_width="0dp"
         android:layout_height="46dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="Task Title"
         android:inputType="textPersonName"
-        android:text="Task Title:"
+        android:text="Task :"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -56,19 +57,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="202dp"
-        app:layout_constraintGuide_percent="0.70" />
+        app:layout_constraintGuide_begin="266dp"
+        app:layout_constraintGuide_percent="0.80" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="83dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/taskTitleInput"
+        android:layout_width="97dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/taskTitleInput"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/goteam_4" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/goteam_5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

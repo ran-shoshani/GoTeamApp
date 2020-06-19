@@ -9,7 +9,7 @@ import android.widget.EditText;
 
 public class AddActivity extends AppCompatActivity {
 
-    EditText taskTitleInput;
+    EditText task_input;
     Button addTaskButton;
 
 
@@ -18,13 +18,13 @@ public class AddActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
 
-        taskTitleInput = findViewById(R.id.taskTitleInput);
+        task_input = findViewById(R.id.taskTitleInput);
         addTaskButton = findViewById(R.id.addTaskButton);
         addTaskButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 MyDatabaseHelper myDB = new MyDatabaseHelper(AddActivity.this);
-                myDB.addNewTask(taskTitleInput.getText().toString().trim());
+                myDB.addNewTask(task_input.getText().toString().trim());
             }
         });
 
